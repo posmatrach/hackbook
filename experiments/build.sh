@@ -1,0 +1,2 @@
+../venv/bin/python twitter-cover-avatars.py > tmp/twitter-cover-avatars.html; xhtml2pdf tmp/twitter-cover-avatars.html tmp/twitter-cover-avatars.pdf;
+../venv/bin/python github-cover-avatars.py > tmp/github-cover-avatars.html; xhtml2pdf tmp/github-cover-avatars.html tmp/github-cover-avatars.pdf;
