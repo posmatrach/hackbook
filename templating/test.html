@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<body>
+	Hello Hack!
+	<div id="placeholder">
+	
+	</div>
+<script src="js/handlebars-0.9.0.pre.5.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script type="text/x-handlebars-template" id="test-tml">
+	
+		<table>
+    		<thead>
+      			<th><b>Name</b></th>
+      			<th><b>Title</b></th>
+      			<th><b>Status</b></th>
+    		</thead>
+			{{#hackers}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{title}}</td>
+				<td>{{status}}</td>
+			</tr>
+			{{/hackers}}
+		</table>
+	
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var source   = $("#test-tml").html();
+	var template = Handlebars.compile(source);
+	var data = { hackers: [
+	      {name: "franceis", title: "mastermind", status: "hacking git api" },
+	      {name: "nenad", title: "hacker", status: "handling some moustache" }
+	    ]};
+	
+	$('#placeholder').html(template(data));
+});
+</script>
+
+</body>
+</html>
